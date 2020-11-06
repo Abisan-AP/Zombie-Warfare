@@ -27,6 +27,8 @@ That is: create the initial objects and add them to the world.</javadoc>
             <body>
                 <variable type="Frog" type-java="Frog" name="frog" value="new Frog()" value-java=" new Frog()" enable="true"/>
                 <call expression="addObject(frog,86,213)" expression-java="addObject(frog, 86, 213)" enable="true"/>
+                <variable type="Banana" type-java="Banana" name="banana" value="new Banana()" value-java=" new Banana()" enable="true"/>
+                <call expression="addObject(banana,366,192)" expression-java="addObject(banana, 366, 192)" enable="true"/>
             </body>
         </method>
     </methods>

@@ -24,7 +24,9 @@ public class MyWorld extends World
      */
     private void prepare()
     {
-        Frog frog =  new Frog();
+        Frog frog =  new  Frog();
         addObject(frog, 86, 213);
+        Banana banana =  new  Banana();
+        addObject(banana, 366, 192);
     }
 }
