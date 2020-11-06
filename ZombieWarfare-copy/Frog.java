@@ -14,6 +14,8 @@ public class Frog extends Actor
      */
     final public void act()
     {
-        move(5);
+        if (Greenfoot.isKeyDown("w")) {
+            move(5);
+        }
     }
 }
