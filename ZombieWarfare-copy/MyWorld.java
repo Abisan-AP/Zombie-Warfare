@@ -1,4 +1,3 @@
-// WARNING: This file is auto-generated and any changes to it will be overwritten
 import lang.stride.*;
 import java.util.*;
 import greenfoot.*;
@@ -24,9 +23,9 @@ public class MyWorld extends World
      */
     private void prepare()
     {
-        Frog frog =  new Frog();
-        addObject(frog, 86, 213);
-        Banana banana =  new Banana();
+        Player player =  new  Player();
+        addObject(player, 86, 213);
+        Banana banana =  new  Banana();
         addObject(banana, 366, 192);
     }
 }

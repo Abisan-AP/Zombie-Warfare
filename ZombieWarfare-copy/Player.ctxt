@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=Player
+comment0.text=\r\n\ \r\n
+comment1.params=
+comment1.target=void\ act()
+comment1.text=\r\n\ Act\ -\ do\ whatever\ the\ Frog\ wants\ to\ do.\ This\ method\ is\ called\ whenever\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\r\n
+comment2.params=x\ y
+comment2.target=void\ turnTowards(int,\ int)
+comment3.params=m
+comment3.target=void\ turnTowards(greenfoot.MouseInfo)
+comment4.params=
+comment4.target=void\ shoot()
+numComments=5
