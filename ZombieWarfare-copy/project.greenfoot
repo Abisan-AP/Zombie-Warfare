@@ -1,7 +1,7 @@
 #Greenfoot project file
 class.Banana.image=bananas.png
 class.Bullet.image=Dot.png
-class.MyWorld.image=wet-blue.jpg
+class.MyWorld.image=cell.jpg
 class.Player.image=frog.png
 dependency1.from=MyWorld
 dependency1.to=Player
@@ -9,22 +9,18 @@ dependency1.type=UsesDependency
 dependency2.from=MyWorld
 dependency2.to=Banana
 dependency2.type=UsesDependency
-<<<<<<< HEAD
-editor.fx.0.height=737
-editor.fx.0.width=814
-editor.fx.0.x=360
-editor.fx.0.y=28
-=======
-dependency3.from=Player
-dependency3.to=Bullet
+dependency3.from=Bullet
+dependency3.to=Banana
 dependency3.type=UsesDependency
-editor.fx.0.height=846
-editor.fx.0.width=955
-editor.fx.0.x=505
-editor.fx.0.y=89
->>>>>>> fd8c516bae29fa384a490737c67ef7849545dee6
+dependency4.from=Player
+dependency4.to=Bullet
+dependency4.type=UsesDependency
+editor.fx.0.height=838
+editor.fx.0.width=1550
+editor.fx.0.x=-7
+editor.fx.0.y=-7
 height=558
-package.numDependencies=3
+package.numDependencies=4
 package.numTargets=4
 project.charset=windows-1252
 publish.hasSource=false
@@ -71,10 +67,5 @@ target4.y=0
 version=3.0.0
 width=982
 world.lastInstantiated=MyWorld
-<<<<<<< HEAD
-xPosition=396
-yPosition=23
-=======
-xPosition=631
-yPosition=358
->>>>>>> fd8c516bae29fa384a490737c67ef7849545dee6
+xPosition=373
+yPosition=140
