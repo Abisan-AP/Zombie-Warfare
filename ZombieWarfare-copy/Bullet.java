@@ -23,6 +23,8 @@ public class Bullet extends Actor
      if(isTouching(Banana.class)){
          removeTouching(Banana.class);
          getWorld().removeObject(this);
+         MyWorld world = (MyWorld) getWorld().getObjects(MyWorld.class).get(0);
+         world.addScore(1);
     }
     else if (this.isAtEdge()){
          getWorld().removeObject(this);  
