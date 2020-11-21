@@ -20,14 +20,15 @@ public class Bullet extends Actor
     
     public void begoneZombie()
     {
-     if(isTouching(Banana.class)){
-         removeTouching(Banana.class);
-         getWorld().removeObject(this);
-         MyWorld world = (MyWorld) getWorld().getObjects(MyWorld.class).get(0);
+     if(isTouching(Zombie.class)){
+         removeTouching(Zombie.class);
+         MyWorld world = (MyWorld)getWorld();
          world.addScore(1);
+         getWorld().removeObject(this);
     }
-    else if (this.isAtEdge()){
-         getWorld().removeObject(this);  
+     else if (this.isAtEdge()){
+         getWorld().removeObject(this);
     }
     }
 }
+

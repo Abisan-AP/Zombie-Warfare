@@ -17,23 +17,24 @@ public class Tower extends Actor
     {
         HP();
         isGameOver();
-    }    
+    }  
+    
     public void HP()
     {
      
-     if(isTouching(Banana.class))
+     if(isTouching(Zombie.class))
       {
           hp -= 1;
-          getWorld().removeObject(getWorld().getObjects(Banana.class).get(0));
+          getWorld().removeObject(getWorld().getObjects(Zombie.class).get(0));
 
       }
-    
     }
     
     public void isGameOver()
     {
         if(hp == 0)
       {
+          getWorld().showText("YOU LOSE :(", 300, 200);
           Greenfoot.stop();
       }
     }

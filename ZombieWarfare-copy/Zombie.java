@@ -5,8 +5,9 @@ import greenfoot.*;
 /**
  * 
  */
-public class Banana extends Actor
+public class Zombie extends Actor
 {
+    private int score = 0;
     /**
      * Act - do whatever the Banana wants to do. This method is called whenever the 'Act' or 'Run' button gets pressed in the environment.
      */
@@ -23,5 +24,4 @@ public class Banana extends Actor
 
         setRotation(angle);
     }
-
 }
