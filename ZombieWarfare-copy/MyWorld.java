@@ -25,7 +25,13 @@ public class MyWorld extends World
     {
         Player player =  new  Player();
         addObject(player, 86, 213);
-        Banana banana =  new  Banana();
-        addObject(banana, 366, 192);
+        //Banana banana =  new  Banana();
+        //addObject(banana, 366, 192);
+        for(int i = 0; i<10; i++){
+            Banana banana =  new  Banana();
+            addObject(banana, Greenfoot.getRandomNumber(550)+25, Greenfoot.getRandomNumber(100)+275);
+        }
+        Tower tower = new Tower();
+        addObject(tower,305,48);
     }
 }
