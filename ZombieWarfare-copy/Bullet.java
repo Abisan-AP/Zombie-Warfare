@@ -16,9 +16,6 @@ public class Bullet extends Actor
     {
         move(10);
         begoneZombie();
-        if(this != null){
-        begoneBullet();
-    }
     }    
     
     public void begoneZombie()
@@ -27,11 +24,7 @@ public class Bullet extends Actor
          removeTouching(Banana.class);
          getWorld().removeObject(this);
     }
-    }
-    
-    public void begoneBullet()
-    {
-     if (this.isAtEdge()){
+    else if (this.isAtEdge()){
          getWorld().removeObject(this);  
     }
     }
