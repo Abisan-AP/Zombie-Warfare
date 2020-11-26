@@ -1,4 +1,4 @@
-import lang.stride.*;
+//import lang.stride.*;
 import java.util.*;
 import greenfoot.*;
 
