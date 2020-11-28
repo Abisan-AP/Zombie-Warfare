@@ -14,7 +14,9 @@ public class Zombie extends Actor
     public void act()
     {
         Tower tower = (Tower) getWorld().getObjects(Tower.class).get(0);
-        lookTowards(tower);
+        if(isTouching(Go_Right.class)){
+           turn (2);
+        }
         move(1);
     }
     public void lookTowards(Actor tower) {
