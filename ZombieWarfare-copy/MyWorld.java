@@ -8,7 +8,7 @@ import greenfoot.*;
 public class MyWorld extends World
 {
     private int score;
-    private int xCord = 160;
+    private int xCord = 125;
     private int yCord = 60;
     /**
      * Constructor for objects of class MyWorld.
@@ -45,15 +45,15 @@ public class MyWorld extends World
         Player player =  new  Player();
         addObject(player, 86, 213);
         path(); 
-        for(int i = 0; i<100; i++){
-            Zombie zombie =  new  Zombie();
-            addObject(zombie, 125,60);
-        }
         Tower tower = new Tower();
         addObject(tower,280,165);
     }
     private void path (){
         int time = 6;
+        Go_Left goLeft = new Go_Left();
+        addObject(goLeft, xCord, yCord);
+        goLeft.turn(90);
+        xCord+=35;
         for(;time>0; time-=2){
            for(int i = 0; i < time+1; i++){
                Go_Streight goStreight1 = new Go_Streight();
