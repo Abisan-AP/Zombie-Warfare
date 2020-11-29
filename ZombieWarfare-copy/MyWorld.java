@@ -1,4 +1,4 @@
-import lang.stride.*;
+//import lang.stride.*;
 import java.util.*;
 import greenfoot.*;
 
@@ -8,6 +8,8 @@ import greenfoot.*;
 public class MyWorld extends World
 {
     private int score;
+    private int xCord = 160;
+    private int yCord = 60;
     /**
      * Constructor for objects of class MyWorld.
      */
@@ -42,11 +44,54 @@ public class MyWorld extends World
     {
         Player player =  new  Player();
         addObject(player, 86, 213);
-        for(int i = 0; i<10; i++){
+        path(); 
+        for(int i = 0; i<100; i++){
             Zombie zombie =  new  Zombie();
-            addObject(zombie, Greenfoot.getRandomNumber(550)+25, Greenfoot.getRandomNumber(100)+275);
+            addObject(zombie, 125,60);
         }
         Tower tower = new Tower();
-        addObject(tower,305,48);
+        addObject(tower,280,165);
+    }
+    private void path (){
+        int time = 6;
+        for(;time>0; time-=2){
+           for(int i = 0; i < time+1; i++){
+               Go_Streight goStreight1 = new Go_Streight();
+               addObject(goStreight1, xCord, yCord);
+               xCord+=35;
+               goStreight1.turn (90);
+           }
+           Go_Right goRight = new Go_Right();
+           addObject(goRight, xCord, yCord);
+           goRight.turn(180);
+           for(int i = 0; i < time; i++){
+               Go_Streight goStreight1 = new Go_Streight();
+               yCord+=35;
+               addObject(goStreight1, xCord, yCord);
+           }
+           Go_Right goRight1 = new Go_Right();
+           yCord+=35;
+           addObject(goRight1, xCord, yCord);
+           goRight1.turn(270);
+           for(int i = 0; i < time; i++){
+               Go_Streight goStreight1 = new Go_Streight();
+               xCord-=35;
+               addObject(goStreight1, xCord, yCord);
+               goStreight1.turn (90);
+           }
+           Go_Right goRight2 = new Go_Right();
+           xCord-=35;
+           addObject(goRight2, xCord, yCord);
+           for(int i = 0; i < time-1; i++){
+               Go_Streight goStreight1 = new Go_Streight();
+               yCord-=35;
+               addObject(goStreight1, xCord, yCord);
+           }
+           Go_Right goRight3 = new Go_Right();
+           yCord-=35;
+           addObject(goRight3, xCord, yCord);
+           goRight3.turn(90);
+           xCord+=35;
+        }
     }
 }

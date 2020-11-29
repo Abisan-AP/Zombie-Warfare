@@ -10,6 +10,7 @@ import greenfoot.MouseInfo;
 public class Player extends Actor
 {
     final int speed = 5;
+    private int shotTimer;
     
     /**
      * Act - do whatever the Frog wants to do. This method is called whenever the 'Act' or 'Run' button gets pressed in the environment.
@@ -35,8 +36,12 @@ public class Player extends Actor
             setLocation(getX() + speed, getY());
         }
         
-        if (Greenfoot.mouseClicked(null)) {
+        if (shotTimer == 0 && Greenfoot.mouseClicked(null)) {
             shoot();
+            shotTimer = 20;
+        }
+        if (shotTimer > 0) {
+            shotTimer--;
         }
     }
     
