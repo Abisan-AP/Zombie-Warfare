@@ -9,16 +9,16 @@ import greenfoot.MouseInfo;
  */
 public class Player extends Actor
 {
-    final int speed = 5;
+    final int speed = 2;
     private int shotTimer;
-    
+    private int zombieCount = 0;
     /**
      * Act - do whatever the Frog wants to do. This method is called whenever the 'Act' or 'Run' button gets pressed in the environment.
      */
     final public void act()
     {
         MouseInfo m = Greenfoot.getMouseInfo();
-        
+        nextZombie();
         if (m != null) {
             turnTowards(m);
         }
@@ -66,5 +66,14 @@ public class Player extends Actor
         getWorld().addObject(bullet, getX(), getY());
         
         bullet.turnTowards(x, y);
+    }
+    
+    private void nextZombie(){
+        zombieCount++;
+        if(zombieCount%50 == 0 && zombieCount<=500){
+            Zombie zombie =  new  Zombie();
+            getWorld().addObject(zombie, 125,25);
+            zombie.turn(90);
+        }
     }
 }
