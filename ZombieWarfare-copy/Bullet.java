@@ -18,18 +18,18 @@ public class Bullet extends Actor
         hitZombie();
     }    
     
-    public void begoneZombie()
-    {
-        if(isTouching(Zombie.class)){        
-            removeTouching(Zombie.class);
-            MyWorld world = (MyWorld)getWorld();
-            world.addScore(1);
-            getWorld().removeObject(this);
-        }
-        else if (this.isAtEdge()){
-            getWorld().removeObject(this);
-        }
-    }
+    //public void begoneZombie()
+    //{
+    //    if(isTouching(Zombie.class)){        
+    //        removeTouching(Zombie.class);
+    //        MyWorld world = (MyWorld)getWorld();
+    //        world.addScore(1);
+    //        getWorld().removeObject(this);
+    //    }
+    //    else if (this.isAtEdge()){
+    //        getWorld().removeObject(this);
+    //    }
+    //}
     
     public void hitZombie() {
         Zombie zombie = (Zombie) getOneObjectAtOffset(0, 0, Zombie.class);
@@ -37,8 +37,14 @@ public class Bullet extends Actor
             zombie.removeHP(25);
             if (zombie.isZombieDead()) {
                 removeTouching(Zombie.class);
-                MyWorld world = (MyWorld)getWorld();
-                world.addScore(1);
+                if (getWorld() instanceof MyWorld) {
+                    MyWorld world = (MyWorld)getWorld();
+                    world.addScore(1);
+                }
+                else if (getWorld() instanceof World2) {
+                    World2 world2 = (World2)getWorld();
+                    world2.addScore(1);
+                }
             }
             getWorld().removeObject(this);
         }

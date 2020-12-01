@@ -48,7 +48,11 @@ public class MyWorld extends World
         Tower tower = new Tower();
         addObject(tower,280,165);
         setPaintOrder(Player.class, Zombie.class, Bullet.class);
+        ZombieSpawner zombieSpawner = new ZombieSpawner();
+        addObject(zombieSpawner,123,10);
+        zombieSpawner.setLocation(127,25);
     }
+
     private void path (){
         int time = 6;
         Go_Left goLeft = new Go_Left();

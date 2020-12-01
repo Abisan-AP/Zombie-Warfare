@@ -32,8 +32,8 @@ public class World2 extends World
     }
     public void addScore(int points)
     {
-       score += points; 
-       if (score > 7) {
+        score += points; 
+        if (score > 7) {
            showText("YOU WIN!!!", 300, 200);
            //Greenfoot.stop();
            

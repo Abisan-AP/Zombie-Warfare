@@ -18,7 +18,7 @@ public class Player extends Actor
     final public void act()
     {
         MouseInfo m = Greenfoot.getMouseInfo();
-        nextZombie();
+        //nextZombie();
         if (m != null) {
             turnTowards(m);
         }

@@ -10,4 +10,6 @@ comment3.params=m
 comment3.target=void\ turnTowards(greenfoot.MouseInfo)
 comment4.params=
 comment4.target=void\ shoot()
-numComments=5
+comment5.params=
+comment5.target=void\ nextZombie()
+numComments=6
