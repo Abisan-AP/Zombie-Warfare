@@ -47,6 +47,7 @@ public class MyWorld extends World
         path(); 
         Tower tower = new Tower();
         addObject(tower,280,165);
+        setPaintOrder(Player.class, Zombie.class, Bullet.class);
     }
     private void path (){
         int time = 6;

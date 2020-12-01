@@ -9,7 +9,7 @@ import greenfoot.MouseInfo;
  */
 public class Player extends Actor
 {
-    final int speed = 5;
+    final int speed = 2;
     private int shotTimer;
     private int zombieCount = 0;
     /**
