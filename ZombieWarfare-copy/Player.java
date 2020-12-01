@@ -58,14 +58,16 @@ public class Player extends Actor
     
     public void shoot() {
         MouseInfo m = Greenfoot.getMouseInfo();
+        if (m != null) {
+            int x = m.getX();
+            int y = m.getY();
         
-        int x = m.getX();
-        int y = m.getY();
         
-        Bullet bullet = new Bullet();
-        getWorld().addObject(bullet, getX(), getY());
+            Bullet bullet = new Bullet();
+            getWorld().addObject(bullet, getX(), getY());
         
-        bullet.turnTowards(x, y);
+            bullet.turnTowards(x, y);
+        }
     }
     
     private void nextZombie(){
