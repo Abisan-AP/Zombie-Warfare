@@ -103,7 +103,7 @@ public class MyWorld extends World
     private void nextLevel()
     {
         if(score == 8){
-          showText("You are being transported to the next level...",400,300);
+          showText("You are being transported to the next level...",300,300);
           World2 lvl2 = new World2();
           Greenfoot.delay(600);
           Greenfoot.setWorld(lvl2);
