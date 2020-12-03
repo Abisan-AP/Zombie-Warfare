@@ -23,7 +23,7 @@ public class MyWorld extends World
     
     public void addScore(int points)
     {
-       score = score + points;
+       score += points;
        showScore();
        if (score > 7) {
            showText("YOU WIN!!!", 300, 200);
@@ -102,7 +102,7 @@ public class MyWorld extends World
     
     private void nextLevel()
     {
-        if(score == 8){
+        if(score >= 8){
           showText("You are being transported to the next level...",300,300);
           World2 lvl2 = new World2();
           Greenfoot.delay(600);

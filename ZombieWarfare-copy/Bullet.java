@@ -45,6 +45,10 @@ public class Bullet extends Actor
                     World2 world2 = (World2)getWorld();
                     world2.addScore(1);
                 }
+                else if (getWorld() instanceof World3) {
+                    World3 world3 = (World3)getWorld();
+                    world3.addScore(1);
+                }
             }
             getWorld().removeObject(this);
         }
