@@ -10,10 +10,7 @@ class.TitleScreen.image=burlap.jpg
 class.Tower.image=dacia_Verde.jpg
 class.World2.image=burlap.jpg
 class.Zombie.image=skeleton-idle_0\ copy.png
-<<<<<<< HEAD
 class.ZombieSpawner.image=tent.png
-=======
->>>>>>> 12a1b0881ade311d10a56ab23e05cd1f0dfef380
 dependency1.from=World2
 dependency1.to=Player
 dependency1.type=UsesDependency
@@ -36,100 +33,74 @@ dependency15.from=MyWorld
 dependency15.to=Tower
 dependency15.type=UsesDependency
 dependency16.from=MyWorld
-dependency16.to=Go_Left
+dependency16.to=ZombieSpawner
 dependency16.type=UsesDependency
 dependency17.from=MyWorld
-dependency17.to=Go_Streight
+dependency17.to=Go_Left
 dependency17.type=UsesDependency
 dependency18.from=MyWorld
-dependency18.to=Go_Right
+dependency18.to=Go_Streight
 dependency18.type=UsesDependency
 dependency19.from=MyWorld
-dependency19.to=World2
+dependency19.to=Go_Right
 dependency19.type=UsesDependency
 dependency2.from=World2
 dependency2.to=Zombie
 dependency2.type=UsesDependency
 dependency20.from=MyWorld
-dependency20.to=Zombie
+dependency20.to=World2
 dependency20.type=UsesDependency
 dependency21.from=MyWorld
-dependency21.to=Bullet
+dependency21.to=Zombie
 dependency21.type=UsesDependency
-<<<<<<< HEAD
-dependency22.from=Player
+dependency22.from=MyWorld
 dependency22.to=Bullet
-dependency22.type=UsesDependency
-dependency23.from=Player
-dependency23.to=Zombie
-dependency23.type=UsesDependency
-dependency24.from=Zombie
-dependency24.to=Tower
-dependency24.type=UsesDependency
-dependency25.from=Zombie
-dependency25.to=Go_Right
-dependency25.type=UsesDependency
-dependency26.from=Zombie
-dependency26.to=Go_Left
-dependency26.type=UsesDependency
-dependency27.from=Start
-dependency27.to=MyWorld
-dependency27.type=UsesDependency
-dependency28.from=Instructions
-dependency28.to=InstructionWorld
-dependency28.type=UsesDependency
-dependency29.from=GoBack
-dependency29.to=TitleScreen
-=======
-dependency22.from=Bullet
-dependency22.to=MyWorld
 dependency22.type=UsesDependency
 dependency23.from=Bullet
 dependency23.to=Zombie
 dependency23.type=UsesDependency
-dependency24.from=Player
-dependency24.to=Bullet
+dependency24.from=Bullet
+dependency24.to=MyWorld
 dependency24.type=UsesDependency
-dependency25.from=Player
-dependency25.to=Zombie
+dependency25.from=Bullet
+dependency25.to=World2
 dependency25.type=UsesDependency
-dependency26.from=Zombie
-dependency26.to=Tower
+dependency26.from=Player
+dependency26.to=Bullet
 dependency26.type=UsesDependency
-dependency27.from=Zombie
-dependency27.to=Go_Right
+dependency27.from=Player
+dependency27.to=Zombie
 dependency27.type=UsesDependency
 dependency28.from=Zombie
-dependency28.to=Go_Left
+dependency28.to=Tower
 dependency28.type=UsesDependency
-dependency29.from=Start
-dependency29.to=MyWorld
->>>>>>> 12a1b0881ade311d10a56ab23e05cd1f0dfef380
+dependency29.from=Zombie
+dependency29.to=Go_Right
 dependency29.type=UsesDependency
 dependency3.from=World2
 dependency3.to=Tower
 dependency3.type=UsesDependency
-<<<<<<< HEAD
-dependency30.from=Credits
-dependency30.to=CreditWorld
+dependency30.from=Zombie
+dependency30.to=Go_Left
 dependency30.type=UsesDependency
-dependency31.from=Tower
+dependency31.from=ZombieSpawner
 dependency31.to=Zombie
 dependency31.type=UsesDependency
-=======
-dependency30.from=Instructions
-dependency30.to=InstructionWorld
-dependency30.type=UsesDependency
-dependency31.from=GoBack
-dependency31.to=TitleScreen
-dependency31.type=UsesDependency
-dependency32.from=Credits
-dependency32.to=CreditWorld
+dependency32.from=Start
+dependency32.to=MyWorld
 dependency32.type=UsesDependency
-dependency33.from=Tower
-dependency33.to=Zombie
+dependency33.from=Instructions
+dependency33.to=InstructionWorld
 dependency33.type=UsesDependency
->>>>>>> 12a1b0881ade311d10a56ab23e05cd1f0dfef380
+dependency34.from=GoBack
+dependency34.to=TitleScreen
+dependency34.type=UsesDependency
+dependency35.from=Credits
+dependency35.to=CreditWorld
+dependency35.type=UsesDependency
+dependency36.from=Tower
+dependency36.to=Zombie
+dependency36.type=UsesDependency
 dependency4.from=World2
 dependency4.to=Go_Streight
 dependency4.type=UsesDependency
@@ -148,23 +119,13 @@ dependency8.type=UsesDependency
 dependency9.from=TitleScreen
 dependency9.to=Start
 dependency9.type=UsesDependency
-<<<<<<< HEAD
-editor.fx.0.height=830
+editor.fx.0.height=791
 editor.fx.0.width=868
-editor.fx.0.x=323
-editor.fx.0.y=0
+editor.fx.0.x=41
+editor.fx.0.y=28
 height=685
-package.numDependencies=31
+package.numDependencies=36
 package.numTargets=21
-=======
-editor.fx.0.height=739
-editor.fx.0.width=816
-editor.fx.0.x=552
-editor.fx.0.y=100
-height=576
-package.numDependencies=33
-package.numTargets=20
->>>>>>> 12a1b0881ade311d10a56ab23e05cd1f0dfef380
 project.charset=windows-1252
 publish.hasSource=false
 publish.locked=true
@@ -187,33 +148,21 @@ target1.width=80
 target1.x=0
 target1.y=0
 target10.height=50
-<<<<<<< HEAD
 target10.name=ZombieSpawner
-=======
-target10.name=TitleScreen
->>>>>>> 12a1b0881ade311d10a56ab23e05cd1f0dfef380
 target10.showInterface=false
 target10.type=ClassTarget
 target10.width=110
 target10.x=0
 target10.y=0
 target11.height=50
-<<<<<<< HEAD
 target11.name=TitleScreen
-=======
-target11.name=Credits
->>>>>>> 12a1b0881ade311d10a56ab23e05cd1f0dfef380
 target11.showInterface=false
 target11.type=ClassTarget
 target11.width=80
 target11.x=0
 target11.y=0
 target12.height=50
-<<<<<<< HEAD
 target12.name=Credits
-=======
-target12.name=Picture
->>>>>>> 12a1b0881ade311d10a56ab23e05cd1f0dfef380
 target12.showInterface=false
 target12.type=ClassTarget
 target12.width=80
@@ -234,61 +183,38 @@ target14.width=80
 target14.x=0
 target14.y=0
 target15.height=50
-<<<<<<< HEAD
 target15.name=Buttons
-=======
-target15.name=CreditWorld
->>>>>>> 12a1b0881ade311d10a56ab23e05cd1f0dfef380
 target15.showInterface=false
 target15.type=ClassTarget
 target15.width=80
 target15.x=0
 target15.y=0
 target16.height=50
-<<<<<<< HEAD
 target16.name=CreditWorld
-=======
-target16.name=Tower
->>>>>>> 12a1b0881ade311d10a56ab23e05cd1f0dfef380
 target16.showInterface=false
 target16.type=ClassTarget
 target16.width=90
 target16.x=0
 target16.y=0
 target17.height=50
-<<<<<<< HEAD
 target17.name=Tower
-=======
-target17.name=Go_Left
->>>>>>> 12a1b0881ade311d10a56ab23e05cd1f0dfef380
 target17.showInterface=false
 target17.type=ClassTarget
 target17.width=80
 target17.x=0
 target17.y=0
 target18.height=50
-<<<<<<< HEAD
 target18.name=Go_Left
-=======
-target18.name=Go_Right
->>>>>>> 12a1b0881ade311d10a56ab23e05cd1f0dfef380
 target18.showInterface=false
 target18.type=ClassTarget
 target18.width=80
 target18.x=0
 target18.y=0
 target19.height=50
-<<<<<<< HEAD
 target19.name=Go_Right
 target19.showInterface=false
 target19.type=ClassTarget
 target19.width=80
-=======
-target19.name=Go_Streight
-target19.showInterface=false
-target19.type=ClassTarget
-target19.width=90
->>>>>>> 12a1b0881ade311d10a56ab23e05cd1f0dfef380
 target19.x=0
 target19.y=0
 target2.height=50
@@ -358,18 +284,11 @@ target9.height=50
 target9.name=GoBack
 target9.showInterface=false
 target9.type=ClassTarget
-target9.width=90
+target9.width=80
 target9.x=0
 target9.y=0
 version=3.0.0
-<<<<<<< HEAD
 width=1096
 world.lastInstantiated=TitleScreen
 xPosition=299
 yPosition=79
-=======
-width=845
-world.lastInstantiated=InstructionWorld
-xPosition=256
-yPosition=108
->>>>>>> 12a1b0881ade311d10a56ab23e05cd1f0dfef380
