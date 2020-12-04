@@ -9,7 +9,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class World3 extends World
 {
-
+    private int score;
+    
     /**
      * Constructor for objects of class World3.
      * 
@@ -18,8 +19,24 @@ public class World3 extends World
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(600, 400, 1); 
+        score = 0;
+        showScore();
         prepare();
         path();
+    }
+    
+    public void addScore(int points)
+    {
+       score += points;
+       showScore();
+       if (score > 7) {
+           showText("YOU WIN!!!", 300, 200);
+        }
+    }
+    
+    public void showScore()
+    {
+        showText("Score: " + score,550,50);
     }
     
     private void prepare() {
@@ -31,6 +48,10 @@ public class World3 extends World
         Player player = new Player();
         addObject(player,530,200);
         player.setRotation(180);
+        ZombieSpawner3 zombieSpawner3 = new ZombieSpawner3();
+        addObject(zombieSpawner3,15,185);
+        ZombieSpawner3 zombieSpawner32 = new ZombieSpawner3();
+        addObject(zombieSpawner32,15,220);
     }
     
     public void path() {

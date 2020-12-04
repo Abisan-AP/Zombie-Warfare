@@ -21,7 +21,6 @@ public class World2 extends World
         path();
         score = 0;
         showScore();
-        prepare();
     }
 
     private void prepObjects()
@@ -39,9 +38,10 @@ public class World2 extends World
     public void addScore(int points)
     {
         score += points; 
+        showScore();
         if (score > 7) {
             showText("YOU WIN!!!", 300, 155);
-            //Greenfoot.stop();
+            goLevel3();
 
         }
     }
@@ -210,12 +210,9 @@ public class World2 extends World
         addObject(straight55, 530,350);
     }
 
-    /**
-     * Prepare the world for the start of the program.
-     * That is: create the initial objects and add them to the world.
-     */
-    private void prepare()
-    {
-        
+    private void goLevel3() {
+        showText("You are now being transported to the next level...", 300, 300);
+        Greenfoot.delay(600);
+        Greenfoot.setWorld(new World3());
     }
 }
