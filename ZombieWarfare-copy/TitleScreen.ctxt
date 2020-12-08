@@ -10,5 +10,5 @@ comment2.text=\r\n\ Prepare\ the\ world\ for\ the\ start\ of\ the\ program.\r\n\
 comment3.params=
 comment3.target=void\ started()
 comment4.params=
-comment4.target=void\ stopped()
+comment4.target=void\ gameOver()
 numComments=5

@@ -42,7 +42,6 @@ public class World2 extends World
         if (score > 7) {
             showText("YOU WIN!!!", 300, 155);
             goLevel3();
-
         }
     }
 
@@ -53,7 +52,7 @@ public class World2 extends World
 
     private void path()
     {
-        Tower tower = new Tower();
+        Tower tower = new Tower(2);
         addObject(tower,145,360);
         Go_Streight straight1 = new Go_Streight();
         addObject(straight1, 145, 325);
@@ -215,4 +214,5 @@ public class World2 extends World
         Greenfoot.delay(600);
         Greenfoot.setWorld(new World3());
     }
+    
 }

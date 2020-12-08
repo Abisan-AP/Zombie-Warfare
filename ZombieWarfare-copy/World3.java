@@ -29,8 +29,9 @@ public class World3 extends World
     {
        score += points;
        showScore();
-       if (score > 7) {
+       if (score > 12) {
            showText("YOU WIN!!!", 300, 200);
+           Greenfoot.stop();
         }
     }
     
@@ -41,7 +42,7 @@ public class World3 extends World
     
     private void prepare() {
         setPaintOrder(Player.class, Zombie.class, Bullet.class);
-        Tower tower = new Tower();
+        Tower tower = new Tower(3);
         addObject(tower,527,207);
         tower.setLocation(500,200);
         tower.setRotation(90);

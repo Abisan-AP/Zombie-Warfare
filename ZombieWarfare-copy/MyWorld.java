@@ -23,10 +23,10 @@ public class MyWorld extends World
     
     public void addScore(int points)
     {
-       score += points;
-       showScore();
-       if (score > 7) {
-           showText("YOU WIN!!!", 300, 200);
+        score += points;
+        showScore();
+        if (score > 7) {
+           showText("You've survived Day1...", 300, 200);
            nextLevel();
         }
     }
@@ -45,7 +45,7 @@ public class MyWorld extends World
         Player player =  new  Player();
         addObject(player, 86, 213);
         path(); 
-        Tower tower = new Tower();
+        Tower tower = new Tower(1);
         addObject(tower,280,165);
         setPaintOrder(Player.class, Zombie.class, Bullet.class);
         ZombieSpawner zombieSpawner = new ZombieSpawner();
@@ -109,4 +109,5 @@ public class MyWorld extends World
           Greenfoot.setWorld(lvl2);
         }
     }
+    
 }
