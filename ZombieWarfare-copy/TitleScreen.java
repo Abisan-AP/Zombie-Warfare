@@ -52,7 +52,7 @@ public class TitleScreen extends World
         soundtrack.play();   
     }
     
-    public void stopped()
+    public void gameOver()
     {
         soundtrack.stop();
     }

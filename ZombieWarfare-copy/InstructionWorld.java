@@ -27,6 +27,6 @@ public class InstructionWorld extends World
         addObject(instructionsPic,getWidth()/2,190);
         GoBack goBack = new GoBack();
         addObject(goBack,60,400);
-        goBack.setLocation(90,350);
+        goBack.setLocation(65,350);
     }
 }

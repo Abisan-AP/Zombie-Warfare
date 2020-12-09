@@ -12,7 +12,8 @@ public class Player extends Actor
     final int speed = 2;
     private int shotTimer;
     private int zombieCount = 0;
-   
+    private GreenfootSound bulletSound = new GreenfootSound("bulletshot.wav");
+    
     /**
      * Act - do whatever the Frog wants to do. This method is called whenever the 'Act' or 'Run' button gets pressed in the environment.
      */
@@ -67,7 +68,9 @@ public class Player extends Actor
             Bullet bullet = new Bullet();
             getWorld().addObject(bullet, getX(), getY());
         
-            bullet.turnTowards(x, y);
+           bullet.turnTowards(x, y);
+           bulletSound.stop();
+           bulletSound.play();
            
         }
     }

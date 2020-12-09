@@ -10,7 +10,7 @@ public class Instructions extends Buttons
 {
     public Instructions()
     {
-        GreenfootImage myIntro = new GreenfootImage(235,60);
+        GreenfootImage myIntro = new GreenfootImage(245,60);
         Font adjustedFont = new Font(true,false,40);
         myIntro.setFont(adjustedFont);
         myIntro.setColor(Color.BLACK);

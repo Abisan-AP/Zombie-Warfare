@@ -10,7 +10,7 @@ public class GoBack extends Buttons
 {
     public GoBack()
     {
-        GreenfootImage goBack = new GreenfootImage(145,60);
+        GreenfootImage goBack = new GreenfootImage(85,60);
         Font adjustedFont = new Font(true,false,25);
         goBack.setFont(adjustedFont);
         goBack.setColor(Color.BLACK);
