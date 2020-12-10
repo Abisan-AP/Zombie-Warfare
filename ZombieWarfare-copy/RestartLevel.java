@@ -14,7 +14,7 @@ public class RestartLevel extends Buttons
         Font adjustedFont = new Font(true,false,40);
         restartLevelButton.setFont(adjustedFont);
         restartLevelButton.setColor(Color.WHITE);
-        restartLevelButton.drawString("Restart Level",0,50);
+        restartLevelButton.drawString("Restart Lvl 1 ",0,50);
         setImage(restartLevelButton);
     }
     

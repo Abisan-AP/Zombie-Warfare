@@ -10,4 +10,6 @@ comment3.params=damage
 comment3.target=void\ removeHP(int)
 comment4.params=
 comment4.target=boolean\ isZombieDead()
-numComments=5
+comment5.params=
+comment5.target=void\ animation()
+numComments=6
