@@ -217,6 +217,8 @@ public class World2 extends World
         addObject(straight54, 530,315);
         Go_Streight straight55 = new Go_Streight();
         addObject(straight55, 530,350);
+        Go_Streight straight58 = new Go_Streight();
+        addObject(straight58, 530,385);
     }
 
     private void goLevel3() {

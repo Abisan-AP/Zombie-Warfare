@@ -158,6 +158,9 @@ public class World3 extends World
         Go_Streight go_Streight29 = new Go_Streight();
         addObject(go_Streight29, 50, 185);
         go_Streight29.setRotation(90);
+        Go_Streight go_Streight30 = new Go_Streight();
+        addObject(go_Streight30, 15, 185);
+        go_Streight30.setRotation(90);
         
         // second path
         Go_Streight go_Streight01 = new Go_Streight();
@@ -249,5 +252,8 @@ public class World3 extends World
         Go_Streight go_Streight029 = new Go_Streight();
         addObject(go_Streight029, 50, 220);
         go_Streight029.setRotation(90);
+        Go_Streight go_Streight030 = new Go_Streight();
+        addObject(go_Streight030, 15, 220);
+        go_Streight030.setRotation(90);
     }
 }
