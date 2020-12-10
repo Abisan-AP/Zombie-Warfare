@@ -219,7 +219,11 @@ readme.name=@README
 readme.width=47
 readme.x=10
 readme.y=10
+<<<<<<< HEAD
 simulation.speed=50
+=======
+simulation.speed=36
+>>>>>>> 990b63feba5f050ebb7ac777292d2f9e3fc1a4db
 target1.height=50
 target1.name=BackToMainMenu
 target1.showInterface=false
@@ -417,7 +421,14 @@ target9.width=80
 target9.x=0
 target9.y=0
 version=3.0.0
+<<<<<<< HEAD
 width=956
 world.lastInstantiated=World3
 xPosition=198
 yPosition=129
+=======
+width=864
+world.lastInstantiated=TitleScreen
+xPosition=624
+yPosition=140
+>>>>>>> 990b63feba5f050ebb7ac777292d2f9e3fc1a4db

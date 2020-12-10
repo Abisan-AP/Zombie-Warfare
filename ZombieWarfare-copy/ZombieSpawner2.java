@@ -21,8 +21,13 @@ public class ZombieSpawner2 extends Actor
         zombieCount++;
         if(zombieCount%50 == 0 && zombieCount<=500){
             Zombie zombie =  new  Zombie();
-            getWorld().addObject(zombie, 530, 385);
-            zombie.turn(-90);
+            getWorld().addObject(zombie, getX(), getY());
+            zombie.setHP(100);
+            zombie.setMoveSpeed(2);
+            zombie.setTurnSpeed(4);
+            if (getWorld() instanceof World2) {
+                zombie.turn(-90);
+            }
         }
     }
 }

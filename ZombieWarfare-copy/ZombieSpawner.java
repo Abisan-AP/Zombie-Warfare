@@ -10,7 +10,7 @@ public class ZombieSpawner extends Actor
 {
     private int zombieCount = 0;
     /**
-     * Act - do whatever the ZombieSpawner wants to do. This method is called whenever
+     * Act - do whatever the ZombieSpawner wants to do. This method is called   whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public void act() 
@@ -22,8 +22,16 @@ public class ZombieSpawner extends Actor
         zombieCount++;
         if(zombieCount%50 == 0 && zombieCount<=500){
             Zombie zombie =  new  Zombie();
-            getWorld().addObject(zombie, 125,25);
-            zombie.turn(90);
+            getWorld().addObject(zombie, getX(), getY());
+            zombie.setHP(100);
+            zombie.setMoveSpeed(1);
+            zombie.setTurnSpeed(2);
+            if (getWorld() instanceof MyWorld) {
+                zombie.turn(90);
+            }
+            else if (getWorld() instanceof World2) {
+                zombie.turn(-90);
+            }
         }
     }
 }

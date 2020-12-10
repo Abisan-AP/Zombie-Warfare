@@ -59,12 +59,28 @@ public class Player extends Actor
             setLocation(getX() + speed, getY());
         }
         
-        if (shotTimer == 0 && Greenfoot.mouseClicked(null)) {
-            shoot();
-            shotTimer = 20;
+        if (getWorld() instanceof MyWorld) {
+            if (shotTimer == 0 && Greenfoot.mouseClicked(null)) {
+                shoot();
+                shotTimer = 20;
+            }
+            if (shotTimer > 0) {
+                shotTimer--;
+            }
         }
-        if (shotTimer > 0) {
-            shotTimer--;
+        else if (getWorld() instanceof World2) {
+            if (shotTimer == 0 && Greenfoot.mouseClicked(null)) {
+                shoot();
+                shotTimer = 15;
+            }
+            if (shotTimer > 0) {
+                shotTimer--;
+            }
+        }
+        else {
+            if (Greenfoot.mouseClicked(null)) {
+                shoot();
+            }
         }
         animationCounter++;
         if(animationCounter % 3 == 0){

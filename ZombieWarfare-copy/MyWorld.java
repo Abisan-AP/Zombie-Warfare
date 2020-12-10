@@ -17,15 +17,15 @@ public class MyWorld extends World
     {
         super(600, 400, 1);
         prepare();
-        score = 0;
+        score = 10;
         showScore();
     }
     
     public void addScore(int points)
     {
-        score += points;
+        score -= points;
         showScore();
-        if (score > 7) {
+        if (score == 0) {
            showText("You've survived Day1...", 300, 200);
            nextLevel();
         }
@@ -33,7 +33,7 @@ public class MyWorld extends World
     
     private void showScore()
     {
-        showText("Score: " + score, 550, 50);
+        showText("Zombies Left: " + score, 500, 50);
     }
 
     /**
@@ -102,7 +102,7 @@ public class MyWorld extends World
     
     private void nextLevel()
     {
-        if(score >= 8){
+        if(score == 0){
           showText("You are being transported to the next level...",300,300);
           World2 lvl2 = new World2();
           Greenfoot.delay(600);

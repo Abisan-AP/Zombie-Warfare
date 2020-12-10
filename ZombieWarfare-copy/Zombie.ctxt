@@ -10,6 +10,16 @@ comment3.params=damage
 comment3.target=void\ removeHP(int)
 comment4.params=
 comment4.target=boolean\ isZombieDead()
+<<<<<<< HEAD
 comment5.params=
 comment5.target=void\ animation()
 numComments=6
+=======
+comment5.params=HP
+comment5.target=void\ setHP(int)
+comment6.params=moveSpeed
+comment6.target=void\ setMoveSpeed(int)
+comment7.params=turnSpeed
+comment7.target=void\ setTurnSpeed(int)
+numComments=8
+>>>>>>> 990b63feba5f050ebb7ac777292d2f9e3fc1a4db

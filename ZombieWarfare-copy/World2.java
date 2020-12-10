@@ -19,27 +19,29 @@ public class World2 extends World
         super(600, 400, 1);
         prepObjects();
         path();
-        score = 0;
+        score = 20;
         showScore();
+        prepare();
     }
 
     private void prepObjects()
     {
-        ZombieSpawner2 zombieSpawner2 = new ZombieSpawner2();
-        addObject(zombieSpawner2,600,400);
+        ZombieSpawner zombieSpawner1 = new ZombieSpawner();
+        addObject(zombieSpawner1,530, 385);
         Player player = new Player();
         addObject(player, 86, 213);
-        Zombie zombie = new Zombie();
-        addObject(zombie, 530, 385);
-        zombie.turn(270);
         setPaintOrder(Player.class, Zombie.class, Bullet.class);
     }
 
     public void addScore(int points)
     {
-        score += points; 
+        score -= points; 
         showScore();
-        if (score > 7) {
+        if (score == 10) {
+            ZombieSpawner2 zombieSpawner2 = new ZombieSpawner2();
+            addObject(zombieSpawner2, 530, 385);
+        }
+        if (score == 0) {
             showText("YOU WIN!!!", 300, 155);
             goLevel3();
         }
@@ -47,7 +49,7 @@ public class World2 extends World
 
     public void showScore()
     {
-        showText("Score: " + score,75,50);
+        showText("Zombies Left: " + score,75,50);
     }
 
     private void path()
@@ -214,5 +216,12 @@ public class World2 extends World
         Greenfoot.delay(600);
         Greenfoot.setWorld(new World3());
     }
-    
+
+    /**
+     * Prepare the world for the start of the program.
+     * That is: create the initial objects and add them to the world.
+     */
+    private void prepare()
+    {
+    }
 }
