@@ -7,7 +7,9 @@ import greenfoot.*;
  */
 public class Zombie extends Actor
 {
-    private int HP = 100;
+    private int HP;
+    private int moveSpeed;
+    private int turnSpeed;
     
     /**
      * Act - do whatever the Banana wants to do. This method is called whenever the 'Act' or 'Run' button gets pressed in the environment.
@@ -16,12 +18,12 @@ public class Zombie extends Actor
     {
         Tower tower = (Tower) getWorld().getObjects(Tower.class).get(0);
         if(isTouching(Go_Right.class)){
-           turn (2);
+           turn (turnSpeed);
         }
         if(isTouching(Go_Left.class)){
-           turn (-2);
+           turn (-turnSpeed);
         }
-        move(1);
+        move(moveSpeed);
     }
     
     public void lookTowards(Actor tower) {
@@ -40,5 +42,15 @@ public class Zombie extends Actor
         return HP <= 0;
     }
     
+    public void setHP(int HP) {
+        this.HP = HP;
+    }
     
+    public void setMoveSpeed(int moveSpeed) {
+        this.moveSpeed = moveSpeed;
+    }
+    
+    public void setTurnSpeed(int turnSpeed) {
+        this.turnSpeed = turnSpeed;
+    }
 }

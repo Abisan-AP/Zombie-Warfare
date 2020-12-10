@@ -19,7 +19,7 @@ public class World3 extends World
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(600, 400, 1); 
-        score = 0;
+        score = 60;
         showScore();
         prepare();
         path();
@@ -27,17 +27,29 @@ public class World3 extends World
     
     public void addScore(int points)
     {
-       score += points;
-       showScore();
-       if (score > 12) {
-           showText("YOU WIN!!!", 300, 200);
-           Greenfoot.stop();
+        score -= points;
+        showScore();
+        if (score == 40) {
+            ZombieSpawner2 zombieSpawner2 = new ZombieSpawner2();
+            addObject(zombieSpawner2, 15, 185);
+            ZombieSpawner2 zombieSpawner22 = new ZombieSpawner2();
+            addObject(zombieSpawner22, 15, 220);
+        }
+        if (score == 20) {
+            ZombieSpawner3 zombieSpawner3 = new ZombieSpawner3();
+            addObject(zombieSpawner3, 15, 185);
+            ZombieSpawner3 zombieSpawner32 = new ZombieSpawner3();
+            addObject(zombieSpawner32, 15, 220);
+        }
+        if (score == 0) {
+            showText("YOU WIN!!!", 300, 200);
+            Greenfoot.stop();
         }
     }
     
     public void showScore()
     {
-        showText("Score: " + score,550,50);
+        showText("Zombies Left: " + score,500, 350);
     }
     
     private void prepare() {
@@ -49,10 +61,10 @@ public class World3 extends World
         Player player = new Player();
         addObject(player,530,200);
         player.setRotation(180);
-        ZombieSpawner3 zombieSpawner3 = new ZombieSpawner3();
-        addObject(zombieSpawner3,15,185);
-        ZombieSpawner3 zombieSpawner32 = new ZombieSpawner3();
-        addObject(zombieSpawner32,15,220);
+        ZombieSpawner zombieSpawner = new ZombieSpawner();
+        addObject(zombieSpawner,15,185);
+        ZombieSpawner zombieSpawner1 = new ZombieSpawner();
+        addObject(zombieSpawner1,15,220);
     }
     
     public void path() {

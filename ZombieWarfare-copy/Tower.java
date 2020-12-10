@@ -29,11 +29,22 @@ public class Tower extends Actor
     public void HP()
     {
      
-     if(isTouching(Zombie.class))
-      {
-          hp -= 1;
-          getWorld().removeObject(getWorld().getObjects(Zombie.class).get(0));
-      }
+        if(isTouching(Zombie.class)) {
+            hp -= 1;
+            getWorld().removeObject(getWorld().getObjects(Zombie.class).get(0));
+            if (getWorld() instanceof MyWorld) {
+                MyWorld world = (MyWorld)getWorld();
+                world.addScore(1);
+            }
+            else if (getWorld() instanceof World2) {
+                World2 world2 = (World2)getWorld();
+                world2.addScore(1);
+            }
+            else if (getWorld() instanceof World3) {
+                World3 world3 = (World3)getWorld();
+                world3.addScore(1);
+            }
+        }
     }
     
     public void isGameOver()
