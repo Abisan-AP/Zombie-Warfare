@@ -7,8 +7,6 @@ import greenfoot.*;
  */
 public class Zombie extends Actor
 {
-<<<<<<< HEAD
-    private int HP = 100;
     private GreenfootImage move0 = new GreenfootImage("skeleton-move_0.png");
     private GreenfootImage move1 = new GreenfootImage("skeleton-move_1.png");
     private GreenfootImage move2 = new GreenfootImage("skeleton-move_2.png");
@@ -28,12 +26,10 @@ public class Zombie extends Actor
     private GreenfootImage move16 = new GreenfootImage("skeleton-move_16.png");
     private int frame = 1;
     private int animationCounter = 0;
-=======
     private int HP;
     private int moveSpeed;
     private int turnSpeed;
     
->>>>>>> 990b63feba5f050ebb7ac777292d2f9e3fc1a4db
     /**
      * Act - do whatever the Banana wants to do. This method is called whenever the 'Act' or 'Run' button gets pressed in the environment.
      */
@@ -46,15 +42,11 @@ public class Zombie extends Actor
         if(isTouching(Go_Left.class)){
            turn (-turnSpeed);
         }
-<<<<<<< HEAD
-        move(1);
+        move(moveSpeed);
         animationCounter++;
         if(animationCounter % 2 == 0){
             animation();
         }
-=======
-        move(moveSpeed);
->>>>>>> 990b63feba5f050ebb7ac777292d2f9e3fc1a4db
     }
     
     public void lookTowards(Actor tower) {
@@ -73,7 +65,6 @@ public class Zombie extends Actor
         return HP <= 0;
     }
     
-<<<<<<< HEAD
     public void animation()
     {
         if(frame == 1)
@@ -151,7 +142,7 @@ public class Zombie extends Actor
             return;
         }
         frame++;
-=======
+    }
     public void setHP(int HP) {
         this.HP = HP;
     }
@@ -162,6 +153,5 @@ public class Zombie extends Actor
     
     public void setTurnSpeed(int turnSpeed) {
         this.turnSpeed = turnSpeed;
->>>>>>> 990b63feba5f050ebb7ac777292d2f9e3fc1a4db
     }
 }
