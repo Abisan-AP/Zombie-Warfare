@@ -27,7 +27,10 @@ public class CreditWorld extends World
         Picture creditsPic = new Picture(credits);
         addObject(creditsPic,getWidth()/2,200);
         GoBack goBack = new GoBack();
-        addObject(goBack,32,345);
+        addObject(goBack,32,350);
         goBack.setLocation(65,350);
+        Next next = new Next();
+        addObject(next,542,350);
+        next.setLocation(530,350);
     }
 }

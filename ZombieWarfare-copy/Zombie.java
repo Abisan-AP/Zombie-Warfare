@@ -143,7 +143,7 @@ public class Zombie extends Actor
         }
         frame++;
     }
-    
+
     public void setHP(int HP) {
         this.HP = HP;
     }

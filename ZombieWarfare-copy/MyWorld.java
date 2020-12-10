@@ -17,7 +17,7 @@ public class MyWorld extends World
     {
         super(600, 400, 1);
         prepare();
-        score = 10;
+        score = 20;
         showScore();
     }
     
@@ -25,6 +25,11 @@ public class MyWorld extends World
     {
         score -= points;
         showScore();
+        if (score == 10) {
+            ZombieSpawner zombieSpawner2 = new ZombieSpawner();
+            addObject(zombieSpawner2,123,10);
+            zombieSpawner2.setLocation(127,25);
+        }
         if (score == 0) {
            showText("You've survived Day1...", 300, 200);
            nextLevel();

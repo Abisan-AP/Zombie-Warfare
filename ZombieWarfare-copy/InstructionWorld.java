@@ -19,10 +19,10 @@ public class InstructionWorld extends World
         super(600, 400, 1); 
         prepare();
     }
-    
+
     public void prepare()
     {
-        GreenfootImage instructions = new GreenfootImage("instructionsbackground3.png");
+        GreenfootImage instructions = new GreenfootImage("INSTRUCTIONSDONE.png");
         Picture instructionsPic = new Picture(instructions);
         addObject(instructionsPic,getWidth()/2,190);
         GoBack goBack = new GoBack();

@@ -19,7 +19,7 @@ public class World2 extends World
         super(600, 400, 1);
         prepObjects();
         path();
-        score = 20;
+        score = 40;
         showScore();
         prepare();
     }
@@ -37,12 +37,20 @@ public class World2 extends World
     {
         score -= points; 
         showScore();
-        if (score == 10) {
-            ZombieSpawner2 zombieSpawner2 = new ZombieSpawner2();
+        if (score == 30) {
+            ZombieSpawner zombieSpawner2 = new ZombieSpawner();
             addObject(zombieSpawner2, 530, 385);
         }
+        if (score == 20) {
+            ZombieSpawner2 zombieSpawner3 = new ZombieSpawner2();
+            addObject(zombieSpawner3, 530, 385);
+        }
+        if (score == 10) {
+            ZombieSpawner2 zombieSpawner4 = new ZombieSpawner2();
+            addObject(zombieSpawner4, 530, 385);
+        }
         if (score == 0) {
-            showText("YOU WIN!!!", 300, 155);
+            showText("You've survived Day2...", 300, 155);
             goLevel3();
         }
     }
@@ -209,6 +217,8 @@ public class World2 extends World
         addObject(straight54, 530,315);
         Go_Streight straight55 = new Go_Streight();
         addObject(straight55, 530,350);
+        Go_Streight straight58 = new Go_Streight();
+        addObject(straight58, 530,385);
     }
 
     private void goLevel3() {

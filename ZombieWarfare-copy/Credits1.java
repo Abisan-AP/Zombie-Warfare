@@ -1,19 +1,19 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Credits here.
+ * Write a description of class Credits1 here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Credits extends Buttons
+public class Credits1 extends Buttons
 {
-    public Credits()
+    public Credits1()
     {
         GreenfootImage myCredit = new GreenfootImage(145,60);
         Font adjustedFont = new Font(true,false,40);
         myCredit.setFont(adjustedFont);
-        myCredit.setColor(Color.BLACK);
+        myCredit.setColor(Color.WHITE);
         myCredit.drawString("Credits",0,50);
         setImage(myCredit);
     }
@@ -22,6 +22,5 @@ public class Credits extends Buttons
     {
         checkMouse();
         checkClick(new CreditWorld());
-    }    
-    
+    } 
 }
