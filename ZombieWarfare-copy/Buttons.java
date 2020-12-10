@@ -10,14 +10,14 @@ public class Buttons extends Actor
 {
     private boolean mouseOver = false;
     private static int MAX_TRANS = 255;
-    
+
     public void checkMouse()
     {
         if(Greenfoot.mouseMoved(null))
         {
             mouseOver = Greenfoot.mouseMoved(this);
         }
-        
+
         if(mouseOver)
         {
             adjTrans(MAX_TRANS/2);
@@ -27,7 +27,7 @@ public class Buttons extends Actor
             adjTrans(MAX_TRANS);
         }
     }    
-    
+
     public void checkClick(World world)
     {
         if(Greenfoot.mouseClicked(this))
@@ -35,7 +35,7 @@ public class Buttons extends Actor
             Greenfoot.setWorld(world);
         }
     }
-    
+
     public void adjTrans(int adjust)
     {
         GreenfootImage tempImage = getImage();

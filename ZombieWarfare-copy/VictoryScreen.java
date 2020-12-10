@@ -18,7 +18,7 @@ public class VictoryScreen extends World
         super(600, 400, 1); 
         prepare();
     }
-    
+
     public void prepare()
     {
         GreenfootImage victory = new GreenfootImage("VictoryGG.png");

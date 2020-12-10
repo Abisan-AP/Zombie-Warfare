@@ -18,10 +18,5 @@ public class Vanier extends Actor
         Vanier.drawString("Fall 2020",0,75);
         Vanier.drawString("Tassia Araujo",0,100);
         setImage(Vanier);
-    }
-    
-    public void act() 
-    {
-        //nothing here for now
-    }    
+    }  
 }

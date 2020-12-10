@@ -8,27 +8,19 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Tower extends Actor
 {
-    //private int worldnum;
     private int hp = 3;
     /**
      * Act - do whatever the Tower wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
-    
-    public Tower(int worldnum)
-    {
-        //this.worldnum = worldnum;
-    }
-    
     public void act() 
     {
         HP();
         isGameOver();
     }  
-    
+
     public void HP()
     {
-     
         if(isTouching(Zombie.class)) {
             hp -= 1;
             getWorld().removeObject(getWorld().getObjects(Zombie.class).get(0));
@@ -46,15 +38,14 @@ public class Tower extends Actor
             }
         }
     }
-    
+
     public void isGameOver()
     {
         if(hp == 0)
-      {
-          getWorld().showText("YOU LOSE :(", 300, 200);
-          GameOverWorld gameover = new GameOverWorld();
-          Greenfoot.setWorld(gameover);
-          //Greenfoot.stop();
-      }
+        {
+            getWorld().showText("YOU LOSE :(", 300, 200);
+            GameOverWorld gameover = new GameOverWorld();
+            Greenfoot.setWorld(gameover);
+        }
     }
 }

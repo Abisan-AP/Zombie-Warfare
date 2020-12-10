@@ -41,11 +41,10 @@ public class Player extends Actor
     final public void act()
     {
         MouseInfo m = Greenfoot.getMouseInfo();
-        //nextZombie();
         if (m != null) {
             turnTowards(m);
         }
-        
+
         if (Greenfoot.isKeyDown("w")) {
             setLocation(getX(), getY() - speed);
         }
@@ -58,7 +57,7 @@ public class Player extends Actor
         if (Greenfoot.isKeyDown("d")) {
             setLocation(getX() + speed, getY());
         }
-        
+
         if (getWorld() instanceof MyWorld) {
             if (shotTimer == 0 && Greenfoot.mouseClicked(null)) {
                 shoot();
@@ -87,7 +86,7 @@ public class Player extends Actor
             animation();
         }
     }
-    
+
     public void animation()
     {
         if(frame == 1)
@@ -178,35 +177,34 @@ public class Player extends Actor
         }
         frame++;
     }
-    
+
     public void turnTowards(int x, int y) {
         double x2 = x - getX();
         double y2 = y - getY();
         double angle = Math.atan2(y2, x2) * 180.0 / Math.PI;
         setRotation((int)angle);
     }
-    
+
     public void turnTowards(MouseInfo m) {
         turnTowards(m.getX(), m.getY());
     }
-    
+
     public void shoot() {
         MouseInfo m = Greenfoot.getMouseInfo();
         if (m != null) {
             int x = m.getX();
             int y = m.getY();
-        
-        
+
             Bullet bullet = new Bullet();
             getWorld().addObject(bullet, getX(), getY());
-        
-           bullet.turnTowards(x, y);
-           bulletSound.stop();
-           bulletSound.play();
-           
+
+            bullet.turnTowards(x, y);
+            bulletSound.stop();
+            bulletSound.play();
+
         }
     }
-    
+
     private void nextZombie(){
         zombieCount++;
         if(zombieCount%50 == 0 && zombieCount<=500){

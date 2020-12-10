@@ -1,4 +1,3 @@
-//import lang.stride.*;
 import java.util.*;
 import greenfoot.*;
 
@@ -20,7 +19,7 @@ public class MyWorld extends World
         score = 20;
         showScore();
     }
-    
+
     public void addScore(int points)
     {
         score -= points;
@@ -31,11 +30,11 @@ public class MyWorld extends World
             zombieSpawner2.setLocation(127,25);
         }
         if (score == 0) {
-           showText("You've survived Day1...", 300, 200);
-           nextLevel();
+            showText("You've survived Day1...", 300, 200);
+            nextLevel();
         }
     }
-    
+
     private void showScore()
     {
         showText("Zombies Left: " + score, 500, 50);
@@ -50,7 +49,7 @@ public class MyWorld extends World
         Player player =  new  Player();
         addObject(player, 86, 213);
         path(); 
-        Tower tower = new Tower(1);
+        Tower tower = new Tower();
         addObject(tower,280,165);
         setPaintOrder(Player.class, Zombie.class, Bullet.class);
         ZombieSpawner zombieSpawner = new ZombieSpawner();
@@ -65,54 +64,53 @@ public class MyWorld extends World
         goLeft.turn(90);
         xCord+=35;
         for(;time>0; time-=2){
-           for(int i = 0; i < time+1; i++){
-               Go_Streight goStreight1 = new Go_Streight();
-               addObject(goStreight1, xCord, yCord);
-               xCord+=35;
-               goStreight1.turn (90);
-           }
-           Go_Right goRight = new Go_Right();
-           addObject(goRight, xCord, yCord);
-           goRight.turn(180);
-           for(int i = 0; i < time; i++){
-               Go_Streight goStreight1 = new Go_Streight();
-               yCord+=35;
-               addObject(goStreight1, xCord, yCord);
-           }
-           Go_Right goRight1 = new Go_Right();
-           yCord+=35;
-           addObject(goRight1, xCord, yCord);
-           goRight1.turn(270);
-           for(int i = 0; i < time; i++){
-               Go_Streight goStreight1 = new Go_Streight();
-               xCord-=35;
-               addObject(goStreight1, xCord, yCord);
-               goStreight1.turn (90);
-           }
-           Go_Right goRight2 = new Go_Right();
-           xCord-=35;
-           addObject(goRight2, xCord, yCord);
-           for(int i = 0; i < time-1; i++){
-               Go_Streight goStreight1 = new Go_Streight();
-               yCord-=35;
-               addObject(goStreight1, xCord, yCord);
-           }
-           Go_Right goRight3 = new Go_Right();
-           yCord-=35;
-           addObject(goRight3, xCord, yCord);
-           goRight3.turn(90);
-           xCord+=35;
+            for(int i = 0; i < time+1; i++){
+                Go_Streight goStreight1 = new Go_Streight();
+                addObject(goStreight1, xCord, yCord);
+                xCord+=35;
+                goStreight1.turn (90);
+            }
+            Go_Right goRight = new Go_Right();
+            addObject(goRight, xCord, yCord);
+            goRight.turn(180);
+            for(int i = 0; i < time; i++){
+                Go_Streight goStreight1 = new Go_Streight();
+                yCord+=35;
+                addObject(goStreight1, xCord, yCord);
+            }
+            Go_Right goRight1 = new Go_Right();
+            yCord+=35;
+            addObject(goRight1, xCord, yCord);
+            goRight1.turn(270);
+            for(int i = 0; i < time; i++){
+                Go_Streight goStreight1 = new Go_Streight();
+                xCord-=35;
+                addObject(goStreight1, xCord, yCord);
+                goStreight1.turn (90);
+            }
+            Go_Right goRight2 = new Go_Right();
+            xCord-=35;
+            addObject(goRight2, xCord, yCord);
+            for(int i = 0; i < time-1; i++){
+                Go_Streight goStreight1 = new Go_Streight();
+                yCord-=35;
+                addObject(goStreight1, xCord, yCord);
+            }
+            Go_Right goRight3 = new Go_Right();
+            yCord-=35;
+            addObject(goRight3, xCord, yCord);
+            goRight3.turn(90);
+            xCord+=35;
         }
     }
-    
+
     private void nextLevel()
     {
         if(score == 0){
-          showText("You are being transported to the next level...",300,300);
-          World2 lvl2 = new World2();
-          Greenfoot.delay(600);
-          Greenfoot.setWorld(lvl2);
+            showText("You are being transported to the next level...",300,300);
+            World2 lvl2 = new World2();
+            Greenfoot.delay(600);
+            Greenfoot.setWorld(lvl2);
         }
     }
-    
 }

@@ -17,7 +17,7 @@ public class ZombieSpawner extends Actor
     {
         nextZombie();
     }    
-    
+
     private void nextZombie(){
         zombieCount++;
         if(zombieCount%50 == 0 && zombieCount<=500){

@@ -17,20 +17,7 @@ public class Bullet extends Actor
         move(10);
         hitZombie();
     }    
-    
-    //public void begoneZombie()
-    //{
-    //    if(isTouching(Zombie.class)){        
-    //        removeTouching(Zombie.class);
-    //        MyWorld world = (MyWorld)getWorld();
-    //        world.addScore(1);
-    //        getWorld().removeObject(this);
-    //    }
-    //    else if (this.isAtEdge()){
-    //        getWorld().removeObject(this);
-    //    }
-    //}
-    
+
     public void hitZombie() {
         Zombie zombie = (Zombie) getOneObjectAtOffset(0, 0, Zombie.class);
         if (zombie != null) {
@@ -57,4 +44,3 @@ public class Bullet extends Actor
         }
     }
 }
-

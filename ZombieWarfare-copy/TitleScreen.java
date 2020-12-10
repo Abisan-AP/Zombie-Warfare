@@ -1,4 +1,4 @@
-import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+import greenfoot.*;
 
 /**
  * Write a description of class TitleScreen here.
@@ -9,14 +9,12 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class TitleScreen extends World
 {
     private GreenfootSound soundtrack = new GreenfootSound("Deal - AShamaluevMusic2.wav");
-    
     /**
      * Constructor for objects of class TitleScreen.
      * 
      */
     public TitleScreen()
     {    
-        // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(600, 400, 1); 
         prepare();
     }
@@ -46,12 +44,12 @@ public class TitleScreen extends World
         addObject(vanier,400,300);
         vanier.setLocation(100,330);
     }
-    
+
     public void started()
     {
         soundtrack.play();   
     }
-    
+
     public void gameOver()
     {
         soundtrack.stop();

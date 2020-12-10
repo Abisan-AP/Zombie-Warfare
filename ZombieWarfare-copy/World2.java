@@ -1,4 +1,4 @@
-import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+import greenfoot.*;
 
 /**
  * Write a description of class World2 here.
@@ -15,7 +15,6 @@ public class World2 extends World
      */
     public World2()
     {    
-        // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(600, 400, 1);
         prepObjects();
         path();
@@ -62,7 +61,7 @@ public class World2 extends World
 
     private void path()
     {
-        Tower tower = new Tower(2);
+        Tower tower = new Tower();
         addObject(tower,145,360);
         Go_Streight straight1 = new Go_Streight();
         addObject(straight1, 145, 325);

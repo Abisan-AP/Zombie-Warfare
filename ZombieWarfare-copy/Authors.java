@@ -16,10 +16,5 @@ public class Authors extends Actor
         Authors.setColor(Color.BLACK);
         Authors.drawString("By: Mark Neefa, Abisan Poothapillai, Gevorg Markarov, Roberto Natale",0,50);
         setImage(Authors);
-    }
-    
-    public void act() 
-    {
-        // Add your action code here.
-    }    
+    } 
 }

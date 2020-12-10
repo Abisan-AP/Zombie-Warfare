@@ -29,7 +29,7 @@ public class Zombie extends Actor
     private int HP;
     private int moveSpeed;
     private int turnSpeed;
-    
+
     /**
      * Act - do whatever the Banana wants to do. This method is called whenever the 'Act' or 'Run' button gets pressed in the environment.
      */
@@ -37,10 +37,10 @@ public class Zombie extends Actor
     {
         Tower tower = (Tower) getWorld().getObjects(Tower.class).get(0);
         if(isTouching(Go_Right.class)){
-           turn (turnSpeed);
+            turn (turnSpeed);
         }
         if(isTouching(Go_Left.class)){
-           turn (-turnSpeed);
+            turn (-turnSpeed);
         }
         move(moveSpeed);
         animationCounter++;
@@ -48,7 +48,7 @@ public class Zombie extends Actor
             animation();
         }
     }
-    
+
     public void lookTowards(Actor tower) {
         double towerX = tower.getX() - getX();
         double towerY = tower.getY() - getY();
@@ -56,15 +56,15 @@ public class Zombie extends Actor
 
         setRotation(angle);
     }
-    
+
     public void removeHP(int damage) {
         HP -= damage;
     }
-    
+
     public boolean isZombieDead() {
         return HP <= 0;
     }
-    
+
     public void animation()
     {
         if(frame == 1)
@@ -147,11 +147,11 @@ public class Zombie extends Actor
     public void setHP(int HP) {
         this.HP = HP;
     }
-    
+
     public void setMoveSpeed(int moveSpeed) {
         this.moveSpeed = moveSpeed;
     }
-    
+
     public void setTurnSpeed(int turnSpeed) {
         this.turnSpeed = turnSpeed;
     }

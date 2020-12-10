@@ -1,5 +1,4 @@
-
-import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+import greenfoot.*;
 
 /**
  * Write a description of class World3 here.
@@ -10,21 +9,19 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class World3 extends World
 {
     private int score;
-    
     /**
      * Constructor for objects of class World3.
      * 
      */
     public World3()
     {    
-        // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(600, 400, 1); 
         score = 60;
         showScore();
         prepare();
         path();
     }
-    
+
     public void addScore(int points)
     {
         score -= points;
@@ -45,15 +42,15 @@ public class World3 extends World
             Greenfoot.setWorld(new VictoryScreen());
         }
     }
-    
+
     public void showScore()
     {
         showText("Zombies Left: " + score,500, 350);
     }
-    
+
     private void prepare() {
         setPaintOrder(Player.class, Zombie.class, Bullet.class);
-        Tower tower = new Tower(3);
+        Tower tower = new Tower();
         addObject(tower,527,207);
         tower.setLocation(500,200);
         tower.setRotation(90);
@@ -65,7 +62,7 @@ public class World3 extends World
         ZombieSpawner zombieSpawner1 = new ZombieSpawner();
         addObject(zombieSpawner1,15,220);
     }
-    
+
     public void path() {
         // first path
         Go_Streight go_Streight = new Go_Streight();
@@ -160,7 +157,7 @@ public class World3 extends World
         Go_Streight go_Streight30 = new Go_Streight();
         addObject(go_Streight30, 15, 185);
         go_Streight30.setRotation(90);
-        
+
         // second path
         Go_Streight go_Streight01 = new Go_Streight();
         addObject(go_Streight01, 470, 220);

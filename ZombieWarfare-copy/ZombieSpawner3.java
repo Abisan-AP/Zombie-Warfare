@@ -9,7 +9,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class ZombieSpawner3 extends Actor
 {
     private int zombieCount = 0;
-    
+
     /**
      * Act - do whatever the ZombieSpawner3 wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
@@ -18,7 +18,7 @@ public class ZombieSpawner3 extends Actor
     {
         nextZombie();
     }
-    
+
     private void nextZombie(){
         zombieCount++;
         if(zombieCount%50 == 0 && zombieCount<=500){
